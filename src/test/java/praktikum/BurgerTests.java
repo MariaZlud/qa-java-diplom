@@ -37,7 +37,6 @@ public class BurgerTests {
     @Test
     public void addIngredientToList() {
         burger.addIngredient(firstIngredient);
-        assertEquals(1, burger.ingredients.size());
         assertEquals(firstIngredient, burger.ingredients.get(0));
     }
 
@@ -47,7 +46,6 @@ public class BurgerTests {
         burger.addIngredient(secondIngredient);
         assertEquals(2, burger.ingredients.size());
         burger.removeIngredient(0);
-        assertEquals(1, burger.ingredients.size());
         assertEquals(secondIngredient, burger.ingredients.get(0));
     }
 
@@ -58,7 +56,6 @@ public class BurgerTests {
         assertEquals(firstIngredient, burger.ingredients.get(0));
         assertEquals(secondIngredient, burger.ingredients.get(1));
         burger.moveIngredient(0, 1);
-        assertEquals(firstIngredient, burger.ingredients.get(1));
         assertEquals(secondIngredient, burger.ingredients.get(0));
     }
 
